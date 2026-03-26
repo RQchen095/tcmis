@@ -10,7 +10,8 @@ def index():
     link += "<a href=/today>現在日期時間</a><hr>"
     link += "<a href=/me>關於我</a><hr>"
     link += "<a href=/welcome>歡迎</a><hr>"
-    link += "<a href=/account>密碼</a><hr>"    
+    link += "<a href=/account>密碼</a><hr>"
+    link += "<a href=/ap>根號</a><hr>"    
     return link
 
 @app.route("/mis")
@@ -41,6 +42,9 @@ def account():
     else:
         return render_template("account.html")
 
+@app.route("/ap")
+def ap():
+    return render_template("ap.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
